@@ -1,0 +1,37 @@
+.detail{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    height: 350px;
+    justify-content: center;
+    margin: 0 auto;
+}
+.detail label{
+    margin-top: 20px;
+}
+
+.detail button{
+    width: 65px;
+    height: 30px;
+    background-color: navy;
+    color: white;
+    margin-top: 20px;
+}
+#del{
+    width: 65px;
+    height: 30px;
+    background-color: red;
+    color: white;
+}
+#del a{
+    text-decoration: none;
+    color: white;
+
+}
+#delete{
+    margin-top: -88px;
+    margin-left: 37%;
+}
+
+
+
