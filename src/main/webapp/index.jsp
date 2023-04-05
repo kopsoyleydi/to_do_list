@@ -58,12 +58,12 @@
                     <input type="text" class="form-control" name="nameTask" placeholder="Найменование...">
                 </div>
                 <div class="mb-3">
-                    <label  class="form-label">Пример текстового поля</label>
-                    <textarea class="form-control" name="description" rows="3"></textarea>
+                    <label  class="form-label">Выполнение</label>
+                    <input class="form-control" name="description" rows="3" type="text">
                 </div>
                 <div class="mb-3">
                     <label  class="form-label">Dead Line</label>
-                    <input type="date" name="deadLine">
+                    <input type="text" class="form-control" name="deadLine" rows="3">
                 </div>
             </div>
             <div class="modal-footer">

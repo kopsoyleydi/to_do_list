@@ -36,8 +36,11 @@ public class DBManager {
     }
 
     public static void deleteTask(Long id){
-        int index = Math.toIntExact(id);
-        tasks.remove(index);
+        for(int i = 0;i<tasks.size();i++){
+            if (tasks.get(i).getId() == id){
+                tasks.remove(i);
+            }
+        }
     }
 
 }

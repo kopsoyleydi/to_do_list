@@ -26,7 +26,7 @@
     <label>ToDo:</label>
       <input type="text" name="description" value="<%=task.getDescription()%>">
     <label>Dead Line:</label>
-    <input type="date" name="deadline">
+    <input type="text" name="deadline" value="<%=task.getDeadlineDate()%>">
     <input type="hidden" name = "id" value="<%=task.getId()%>">
     <button type="submit" id="save">Save</button>
   </div>
