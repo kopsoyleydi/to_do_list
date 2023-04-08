@@ -59,11 +59,14 @@
                 </div>
                 <div class="mb-3">
                     <label  class="form-label">Выполнение</label>
-                    <input class="form-control" name="description" rows="3" type="text">
+                    <select name="description" class="form-select">
+                        <option>Yes</option>
+                        <option>No</option>
+                    </select>
                 </div>
                 <div class="mb-3">
                     <label  class="form-label">Dead Line</label>
-                    <input type="text" class="form-control" name="deadLine" rows="3">
+                    <input type="date" class="form-control" name="deadLine" rows="3">
                 </div>
             </div>
             <div class="modal-footer">

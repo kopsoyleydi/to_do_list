@@ -9,12 +9,13 @@ public class DBManager {
 
     private static Long id = 6L;
     static {
-        tasks.add(new Tasks(1L, "Создать веб приложение на Java EE", "Yes", "23.10.2021"));
-        tasks.add(new Tasks(2L, "Создать веб приложение на Java EE", "Yes", "23.10.2021"));
-        tasks.add(new Tasks(3L, "Создать веб приложение на Java EE", "Yes", "23.10.2021"));
-        tasks.add(new Tasks(4L, "Создать веб приложение на Java EE", "Yes", "23.10.2021"));
-        tasks.add(new Tasks(5L, "Создать веб приложение на Java EE", "Yes", "23.10.2021"));
+        tasks.add(new Tasks(1L, "Создать веб приложение на Java EE", "Yes", "2021-07-10"));
+        tasks.add(new Tasks(2L, "Создать веб приложение на Java EE", "Yes", "2020-07-10"));
+        tasks.add(new Tasks(3L, "Создать веб приложение на Java EE", "No", "2023-02-01"));
+        tasks.add(new Tasks(4L, "Создать веб приложение на Java EE", "Yes", "2023-01-01"));
+        tasks.add(new Tasks(5L, "Создать веб приложение на Java EE", "Yes", "2023-05-07"));
     }
+
 
     public static void addTask(Tasks task){
         task.setId(id);

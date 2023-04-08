@@ -24,17 +24,46 @@
     <label>Task Name:</label>
     <input type="text" name="nameTask" value="<%=task.getName()%>">
     <label>ToDo:</label>
-      <input type="text" name="description" value="<%=task.getDescription()%>">
+    <select class="form-select" name="description">
+      <option <%=(task.getDescription().equals("Yes")?"selected":"")%>>Yes</option>
+      <option <%=(task.getDescription().equals("No")?"selected":"")%>>No</option>
+    </select>
     <label>Dead Line:</label>
-    <input type="text" name="deadline" value="<%=task.getDeadlineDate()%>">
+    <input type="date" name="deadline" value="<%=task.getDeadlineDate()%>">
     <input type="hidden" name = "id" value="<%=task.getId()%>">
-    <button type="submit" id="save">Save</button>
+    <div class="items">
+      <button type="submit" id="save">Save</button>
+      <button type="button" data-bs-toggle="modal" data-bs-target="#modalka" style="background-color: red; margin-left: 5%">
+        Delete
+      </button>
+    </div>
+
   </div>
 </form>
-<form action="/DeleteServlet" method="post" id="delete">
-  <input type="hidden" name="idDel" value="<%=task.getId()%>">
-  <button type="submit" id="del">Delete</button>
-</form>
+
+<!-- Модальное окно -->
+<div class="modal fade" id="modalka" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Agree</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+      </div>
+      <div class="modal-body">
+        Are you delete this task?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+        <form action="/DeleteServlet" method="post">
+          <input type="hidden" name="idDel" value="<%=task.getId()%>">
+          <button type="submit" class="btn btn-danger">Delete</button>
+        </form>
+
+    </div>
+    </div>
+  </div>
+
+</div>
 <%
   }
 %>
